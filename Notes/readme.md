@@ -7,7 +7,7 @@ Imagine you're building a web page using HTML and JavaScript. **JSX is like a mi
 ### Here's a simple example:
 ` const element = <h1>Hello, world!</h1>; `
 
-In the example above, <h1>Hello, world!</h1> looks like HTML, but it's actually JSX. **Under the hood, JSX gets transformed into regular JavaScript code** that React can understand and work with.
+In the example above, **Hello, world!** looks like HTML, but it's actually JSX. **Under the hood, JSX gets transformed into regular JavaScript code** that React can understand and work with.
 
 JSX makes it easier to write and understand code, especially when you're building user interfaces with React. It lets you write HTML-like code directly in your JavaScript files, which helps keep your code organized and makes it more readable.
 

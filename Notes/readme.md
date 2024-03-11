@@ -275,7 +275,7 @@ Example:
 `
 
 Here's a simple example of how you might use useRef to store a reference to a DOM element and focus on it when a button is clicked:
-<pre>
+```
 import React, { useRef } from 'react';
 
 function TextInputWithFocusButton() {

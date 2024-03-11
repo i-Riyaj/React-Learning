@@ -112,7 +112,7 @@ setState with a new value, React re-renders the component with the updated state
 ### Example:
 
 Here's a simple example of how you might use useState in a functional component to manage a counter:
-`
+```
 import React, { useState } from 'react';
 
 function Counter() {
@@ -129,7 +129,7 @@ function Counter() {
     </div>
   );
 }
-`
+```
 In the example above, the Counter component maintains its own state using the useState hook. It initializes the count state to 0, and when the button is clicked, it updates the count state by calling the setCount function with the new value of count.
 
 This way, React keeps track of the state changes, and whenever the state changes, it automatically re-renders the component to reflect the updated state on the UI.
@@ -140,14 +140,14 @@ This way, React keeps track of the state changes, and whenever the state changes
 
 Inside your functional component, you call the useCallback function and pass in the function you want to **memoize**, along with an array of **dependencies**. **The hook returns a memoized version of the function**.
 
-`
+```
 const memoizedCallback = useCallback(
   () => {
     // Function body
   },
   [dependencies]
 );
-`
+```
 
 - () => { ... }: This is the function you want to memoize.
 - `[dependencies]`: **This is an array of dependencies. The function will be re-created only if any of the dependencies change. If the dependencies array is empty, the function will be memoized once and reused for the lifetime of the component.**
@@ -156,7 +156,7 @@ const memoizedCallback = useCallback(
 
 Here's a simple example of how you might use useCallback to memoize a function:
 
-`
+```
 import React, { useState, useCallback } from 'react';
 
 function Counter() {
@@ -177,7 +177,7 @@ function Counter() {
     </div>
   );
 }
-`
+```
 In the example above, the increment function is memoized using the useCallback hook. Since the useCallback hook has an empty dependency array ([]), the increment function is memoized once and reused throughout the component's lifecycle. This helps prevent unnecessary re-creation of the increment function on each render, thus optimizing performance.
 
 ## useEffect
@@ -189,26 +189,26 @@ The useEffect hook in React is used to perform side effects in functional compon
 - Importing the Hook: First, you import the useEffect hook from the react library: `import React, { useEffect } from 'react';`
 
 - Using useEffect: Inside your functional component, you call the useEffect function and pass in a function (often referred to as the "effect") that contains the code for the side effect you want to perform.
-`
+```
 useEffect(() => {
   // Side effect code
 });
-`
+```
 The function passed to useEffect is executed after the component renders for the first time, and after every update to the component's state or props.
 
 ***If you want the effect to run only once after the initial render, you can pass an empty dependency array ([]) as the second argument to useEffect.***
-`
+```
 useEffect(() => {
   // Side effect code that runs only once after the initial render
 }, []);
-`
+```
 
 ***If you want the effect to run only when certain values (dependencies) change, you can pass those values in an array as the second argument to useEffect.***
-`
+```
 useEffect(() => {
   // Side effect code that runs when dependencies change
 }, [dependency1, dependency2]);
-`
+```
 
 - **Cleaning Up**: useEffect can also return a cleanup function, which will be executed when the component unmounts or when the dependencies of the effect change and it needs to be re-run. This is useful for cleaning up any resources created by the effect, such as event listeners or subscriptions.
 `
@@ -221,7 +221,7 @@ useEffect(() => {
 `
 
 - Here's a simple example of how you might use useEffect to fetch data from an API:
-`
+```
 import React, { useState, useEffect } from 'react';
 
 function DataFetcher() {
@@ -249,7 +249,7 @@ function DataFetcher() {
     </div>
   );
 }
-`
+```
 In the example above, the DataFetcher component fetches data from an API using the useEffect hook with an empty dependency array ([]). This ensures that the data is fetched only once, after the initial render. When the data is fetched, it is stored in the component's state (data), and the UI is updated accordingly.
 
 ## useRef
@@ -275,7 +275,7 @@ Example:
 `
 
 Here's a simple example of how you might use useRef to store a reference to a DOM element and focus on it when a button is clicked:
-`
+<pre>
 import React, { useRef } from 'react';
 
 function TextInputWithFocusButton() {
@@ -298,7 +298,7 @@ function TextInputWithFocusButton() {
     </div>
   );
 }
-`
+```
 In the example above, the inputRef reference is created using the useRef hook. When the component renders, the ref attribute of the input element is set to inputRef, which allows us to access the input element using inputRef.current. When the button is clicked, the focusTextInput function is called, which uses the focus() method to focus on the input element. This demonstrates how useRef can be used to interact with DOM elements imperatively in React functional components.
 
 

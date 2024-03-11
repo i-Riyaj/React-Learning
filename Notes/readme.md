@@ -310,7 +310,7 @@ Memoization is an optimization technique used in programming to speed up certain
 
 - **Cache**: A cache is created to store the previously computed results. This cache can be a simple object or a more sophisticated data structure depending on the implementation.
 
-- **Function Call**: When a memoized function is called with a specific set of inputs, the function first checks the ca**che.
+- **Function Call**: When a memoized function is called with a specific set of inputs, the function first checks the cache.
 
 - **Cache Lookup**: If the cache contains an entry for the exact combination of inputs used in the current function call, the function retrieves the pre-computed result from the cache and returns it immediately.
 
